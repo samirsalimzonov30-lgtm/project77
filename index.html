@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoLux Uzbekistan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>AutoLux <span>Uzbekistan</span></h1>
+    <nav>
+        <a href="#home">Главная</a>
+        <a href="#cars">Автомобили</a>
+        <a href="#about">О нас</a>
+        <a href="#contacts">Контакты</a>
+    </nav>
+    <button class="cart-button" onclick="showCart()">
+        🛒 Корзина (<span id="cart-count">0</span>)
+    </button>
+</header>
+
+<section class="hero" id="home">
+    <h2>Найди свой идеальный автомобиль</h2>
+    <p>Популярные автомобили по выгодным ценам в Узбекистане</p>
+    <a href="#cars" class="button">Смотреть каталог</a>
+</section>
+
+<section class="catalog" id="cars">
+    <h2>Наши автомобили</h2>
+
+    <input
+        type="text"
+        id="search"
+        placeholder="Поиск автомобиля..."
+        oninput="searchCars()"
+    >
+
+    <div class="car-container" id="car-list">
+
+        <div class="car" data-name="Chevrolet Camaro">
+            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=800&q=80" alt="Chevrolet Camaro">
+            <h3>Chevrolet Camaro</h3>
+            <p>Год: 2024</p>
+            <p>Двигатель: 3.6 л</p>
+            <p class="price">650 000 000 сум</p>
+            <button onclick="addToCart('Chevrolet Camaro')">В корзину</button>
+        </div>
+
+        <div class="car" data-name="Porsche 911">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80" alt="Porsche 911">
+            <h3>Porsche 911</h3>
+            <p>Год: 2024</p>
+            <p>Двигатель: 3.0 л</p>
+            <p class="price">1 800 000 000 сум</p>
+            <button onclick="addToCart('Porsche 911')">В корзину</button>
+        </div>
+
+        <div class="car" data-name="BMW 5 Series">
+            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80" alt="BMW 5 Series">
+            <h3>BMW 5 Series</h3>
+            <p>Год: 2024</p>
+            <p>Двигатель: 2.0 л</p>
+            <p class="price">850 000 000 сум</p>
+            <button onclick="addToCart('BMW 5 Series')">В корзину</button>
+        </div>
+
+        <div class="car" data-name="Mercedes-Benz E-Class">
+            <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80" alt="Mercedes-Benz E-Class">
+            <h3>Mercedes-Benz E-Class</h3>
+            <p>Год: 2024</p>
+            <p>Двигатель: 2.0 л</p>
+            <p class="price">900 000 000 сум</p>
+            <button onclick="addToCart('Mercedes-Benz E-Class')">В корзину</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>О нашем автосалоне</h2>
+    <p>
+        AutoLux Uzbekistan — интернет-автосалон для выбора популярных
+        автомобилей. Изучайте модели, характеристики и цены,
+        а также добавляйте понравившиеся автомобили в корзину.
+    </p>
+</section>
+
+<section class="contacts" id="contacts">
+    <h2>Контакты</h2>
+    <p>Страна: Узбекистан</p>
+    <p>Телефон: +998 90 123 45 67</p>
+    <p>Email: autolux@example.com</p>
+    <p class="note">Контактные данные демонстрационные.</p>
+</section>
+
+<footer>
+    <p>© 2026 AutoLux Uzbekistan. Все права защищены.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
